@@ -1,0 +1,10 @@
+c:\users\nsakhuja\source\repos\TicTacToe\TicTacToe\bin\Debug\netcoreapp1.1\TicTacToe.deps.json
+c:\users\nsakhuja\source\repos\TicTacToe\TicTacToe\bin\Debug\netcoreapp1.1\TicTacToe.runtimeconfig.json
+c:\users\nsakhuja\source\repos\TicTacToe\TicTacToe\bin\Debug\netcoreapp1.1\TicTacToe.runtimeconfig.dev.json
+c:\users\nsakhuja\source\repos\TicTacToe\TicTacToe\bin\Debug\netcoreapp1.1\TicTacToe.dll
+c:\users\nsakhuja\source\repos\TicTacToe\TicTacToe\obj\Debug\netcoreapp1.1\TicTacToe.csprojResolveAssemblyReference.cache
+c:\users\nsakhuja\source\repos\TicTacToe\TicTacToe\obj\Debug\netcoreapp1.1\TicTacToe.csproj.CoreCompileInputs.cache
+c:\users\nsakhuja\source\repos\TicTacToe\TicTacToe\obj\Debug\netcoreapp1.1\TicTacToe.AssemblyInfo.cs
+c:\users\nsakhuja\source\repos\TicTacToe\TicTacToe\bin\Debug\netcoreapp1.1\TicTacToe.pdb
+c:\users\nsakhuja\source\repos\TicTacToe\TicTacToe\obj\Debug\netcoreapp1.1\TicTacToe.dll
+c:\users\nsakhuja\source\repos\TicTacToe\TicTacToe\obj\Debug\netcoreapp1.1\TicTacToe.pdb

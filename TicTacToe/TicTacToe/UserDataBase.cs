@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace TicTacToe
 {
     public class UserDataBase : IRepository
-    {
+    { 
         public string[] AddUserToDataBase(User value)
         {
             SqlConnection connection = new SqlConnection();
@@ -60,10 +60,11 @@ namespace TicTacToe
             SqlConnection connection = new SqlConnection();
             connection.ConnectionString = "Data Source=.;Initial Catalog=TicTacToe Database;User ID=Sa;Password=test123!@#";
             connection.Open();
-            SqlCommand command = new SqlCommand("insert into ApplicationLog values(@Request,@Response,@Exception)", connection);
+            SqlCommand command = new SqlCommand("insert into ApplicationLog values(@Request,@Response,@Exception,@Status)", connection);
             command.Parameters.AddWithValue("@Request", logger.Request);
             command.Parameters.AddWithValue("@Response", logger.Response);
             command.Parameters.AddWithValue("@Exception", logger.Exception);
+            command.Parameters.AddWithValue("@Status", logger.Status);
             command.ExecuteNonQuery();
             connection.Close();
         }

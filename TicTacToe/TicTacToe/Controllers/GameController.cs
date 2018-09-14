@@ -18,6 +18,7 @@ namespace TicTacToe.Controllers
         static int moves = 0;
         static bool player1 = false;
         static bool player2 = false;
+        static int flag = 0;
         // POST api/values
         [HttpPost]
         [Autorize]
@@ -69,7 +70,7 @@ namespace TicTacToe.Controllers
                     throw new Exception("Its Not Your Turn...!!!");
                 }
             }
-            else if(player1Key == apikey || player2Key == apikey)
+            else if((player1Key == apikey || player2Key == apikey) && flag == 0)
             {
                 if(apikey == player1Key && turn == 1)
                 {
@@ -105,25 +106,40 @@ namespace TicTacToe.Controllers
                 }
                 if (player1)
                 {
+                    flag = 1;
+                    LogAttribute.status = "Player 1 Won The Game";
                     return "Player 1 Won The Game";
                 }
                 else if (player2)
                 {
+                    flag = 2;
+                    LogAttribute.status = "Player 2 Won The Game";
                     return "Player 2 Won The Game";
                 }
                 else if (moves == 9)
                 {
+                    LogAttribute.status = "Game Is Tied";
                     return "Game Is Tied";
                 }
                 else
                 {
+                    LogAttribute.status = "Game is in Process";
                     return "Game is in Process";
                 }
+            }
+            else if (flag == 1)
+            {
+                throw new Exception("Game is over and Player 1 has Won");
+            }
+            else if (flag == 2)
+            {
+                throw new Exception("Game is over and Player 2 has Won");
             }
             else
             {
                 throw new Exception("No More Players Allowed");
             }
+            LogAttribute.status = "Game is in Process";
             return "Game is in Process";
         }
 

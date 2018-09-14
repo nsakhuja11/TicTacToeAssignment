@@ -9,6 +9,7 @@ namespace TicTacToe
     {
         public string Request { get; set; }
         public string Response { get; set; }
+        public string Status { get; set; }
         public string Exception { get; set; }
     }
 }

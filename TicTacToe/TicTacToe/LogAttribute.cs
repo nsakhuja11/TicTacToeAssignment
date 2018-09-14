@@ -11,6 +11,7 @@ namespace TicTacToe
     {
         Logger log = new Logger();
         UserDataBase Database = new UserDataBase();
+        public static string status = "-";
         public void OnActionExecuted(ActionExecutedContext context)
         {
             if (context.Exception == null)
@@ -18,16 +19,14 @@ namespace TicTacToe
                 log.Request = context.RouteData.Values["action"].ToString() + " " + context.RouteData.Values["controller"].ToString();
                 log.Response = "Success";
                 log.Exception = "NULL";
+                log.Status = status;
                 Database.LogDatabase(log);
             }
         }
 
         public void OnActionExecuting(ActionExecutingContext context)
         {
-            log.Request = context.RouteData.Values["action"].ToString() + " " + context.RouteData.Values["controller"].ToString();
-            log.Response = "NULL";
-            log.Exception = "NULL";
-            Database.LogDatabase(log);
+
         }
     }
 }

@@ -10,7 +10,7 @@ namespace TicTacToe
     {
         Logger log = new Logger();
         UserDataBase Database = new UserDataBase();
-
+        public static string status = "-";
         public override void OnException(ExceptionContext actionExecutedContext)
         {
             if (actionExecutedContext.Exception is Exception)
@@ -19,6 +19,7 @@ namespace TicTacToe
                 log.Exception = actionExecutedContext.Exception.ToString();
                 var index = log.Exception.IndexOf("\r");
                 log.Exception = log.Exception.Substring(0, index);
+                log.Status = status;
                 log.Response = "Failure";
                 Database.LogDatabase(log);
             }
